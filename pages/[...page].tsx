@@ -8,8 +8,16 @@ import Head from "next/head";
 import { GetStaticProps } from "next";
 import config from "@/app/config/config";
 
-// Replace with your Public API Key
-builder.init(config.BUILDER_IO_API_KEY);
+
+const builderIOAPIKey = process.env.BUILDER_IO_API_KEY;
+
+if (builderIOAPIKey !== undefined) {
+  builder.init(builderIOAPIKey);
+} else {
+  console.error('Builder.io API key is not defined in the environment variables.');
+}
+
+
 
 // Define a function that fetches the Builder
 // content for a given page
