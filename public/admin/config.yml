@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: GROWDND/mandatedReporterTraining
+  repo: jasonsutter87/next-builder-netlify-cms
   branch: master
 
 publish_mode: editorial_workflow
