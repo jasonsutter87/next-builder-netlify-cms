@@ -2,15 +2,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
-// Import Netlify CMS
-import CMS from 'netlify-cms-app';
-
-// Import the configuration file
-import config from './admin/config.yml';
-
-// Initialize Netlify CMS with your configuration
-CMS.init({ config });
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {

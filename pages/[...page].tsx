@@ -9,7 +9,7 @@ import { GetStaticProps } from "next";
 import config from "@/app/config/config";
 
 // Replace with your Public API Key
-builder.init(config.NEXT_PUBLIC_BUILDER_IO_API_KEY);
+builder.init(config.BUILDER_IO_API_KEY);
 
 // Define a function that fetches the Builder
 // content for a given page
@@ -67,7 +67,6 @@ export default function Page({ page }: { page: BuilderContent | null }) {
     <>
       <Head>
         <title>{page?.data?.title}</title>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       {/* Render the Builder page */}
       <BuilderComponent model="page" content={page || undefined} />

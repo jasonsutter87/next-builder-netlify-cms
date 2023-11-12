@@ -11,7 +11,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       <Header />
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       {children}
       <Footer />
     </div>
