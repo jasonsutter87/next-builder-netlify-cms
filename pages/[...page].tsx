@@ -9,14 +9,9 @@ import { GetStaticProps } from "next";
 import config from "@/app/config/config";
 
 
-const builderIOAPIKey = process.env.BUILDER_IO_API_KEY;
 
-if (builderIOAPIKey !== undefined) {
-  builder.init(builderIOAPIKey);
-} else {
-  console.error('Builder.io API key is not defined in the environment variables.');
-}
 
+builder.init("ee03a36eb3a340d6a768506bc4f11c1f");
 
 
 // Define a function that fetches the Builder
