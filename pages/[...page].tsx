@@ -9,9 +9,10 @@ import { GetStaticProps } from "next";
 import config from "@/app/config/config";
 
 
+console.log('BUILDER_IO_API_KEY:', process.env.BUILDER_IO_API_KEY);
+builder.init(process.env.BUILDER_IO_API_KEY || 'ee03a36eb3a340d6a768506bc4f11c1f');
 
 
-builder.init("ee03a36eb3a340d6a768506bc4f11c1f");
 
 
 // Define a function that fetches the Builder
